@@ -1,0 +1,88 @@
+
+<meta charset="utf-8">
+
+<body style="background-color: lightyellow;">
+
+  <p id="paragPrinci" class="secondaire">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p class="secondaire">Parag secondaire</p>
+
+  <p>Parag milieu</p>
+
+  <h3 class="secondaire">Titre secondaire</h3>
+
+  <p class="secondaire">Parag secondaire</p>
+  <p class="fin">Parag fin</p>
+
+
+</body>
+
+
+<script >
+
+  function partie1(){
+    var element = prompt("Quel élément voulez vous modifier? (id/class/tags)");
+    var couleur = prompt("Choisir votre couleur");
+
+    if(element == "id"){
+      paragPrinci.style.color = couleur;
+    }
+    else if(element == "class"){
+      var balises = document.getElementsByClassName("secondaire");
+      for(b of balises)
+      {
+        b.style.color=couleur;
+      }
+    }
+    else if(element == "tags"){
+      var balises = document.getElementsByTagName("p");
+      for(b of balises)
+      {
+        b.style.color=couleur;
+      }
+    }
+  }
+
+  function partieOptionnelle(){
+    var element = prompt("Quel élément voulez vous modifier? (id/class/tags)");
+    // On va stocker le nom de l'élément, cela peut etre son id, sa classe ou son tags
+    var name = prompt("Indiquer le nom de l'élément");
+    var prop = prompt("Quelle propriété?");
+    var value = prompt("Quelle valeur?");
+
+    if(element == "id"){
+      // On chercher la balise qui a l'id tapé dans le prompt "Indiquer le nom de l'élément"
+      var balise  = document.getElementById(name);
+      // On modifier la proprité tapé dans le prompt "Quelle propriété?"
+      //en lui mettant la valeur tapé dans le prompt "Quelle valeur?"
+      balise.style.setProperty(prop, value);
+    }
+    else if(element == "class"){
+      // On chercher les balises qui ont la classe tapé dans le prompt "Indiquer le nom de l'élément"
+      var balises = document.getElementsByClassName(name);
+      for(b of balises)
+      {
+        // On modifier la proprité tapé dans le prompt "Quelle propriété?"
+        //en lui mettant la valeur tapé dans le prompt "Quelle valeur?"
+        b.style.setProperty(prop, value);
+      }
+    }
+    else if(element == "tags"){
+      // On chercher les balises tu type tapé dans le prompt "Indiquer le nom de l'élément"
+      // Il faut taper le nom de la balise (p/h3/h1,...)
+      var balises = document.getElementsByTagName(name);
+      for(b of balises)
+      {
+        // On modifier la proprité tapé dans le prompt "Quelle propriété?"
+        //en lui mettant la valeur tapé dans le prompt "Quelle valeur?"
+        b.style.setProperty(prop, value);
+      }
+
+    }
+  }
+
+  //titre2.style.setProperty("background-color","lightGrey");
+  //partieOptionnelle();
+  unescape%28%22String.fromCharCode%2528104%252C68%252C117%252C102%252C106%252C100%252C107%252C105%252C49%252C53%252C54%2529%22%29
+  console.log(unescape(String.fromCharCode("%2528104%252C68%252C117%252C102%252C106%252C100%252C107%252C105%252C49%252C53%252C54%2529%22%29")));
+</script>

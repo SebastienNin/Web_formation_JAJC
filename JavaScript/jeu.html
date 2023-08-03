@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu des capitales</title>
+</head>
+<body>
+  <script>
+    // Créer des objets pays avec leur nom et capitale
+    const pays = [
+      { nom: 'France', capitale: 'Paris' },
+      { nom: 'Espagne', capitale: 'Madrid' },
+      { nom: 'Allemagne', capitale: 'Berlin' },
+      { nom: 'Italie', capitale: 'Rome' },
+      { nom: 'Royaume-Uni', capitale: 'Londres' }
+    ];
+
+    let score = 0;
+
+    // Boucle pour afficher chaque pays et demander à l'utilisateur la capitale
+    for (i in pays) {
+      prompt(i+1 + `test`);
+      /*const nomPays = pays[i].nom;
+      const capitaleAttendue = pays[i].capitale;
+      const reponseUtilisateur = prompt(`Quelle est la capitale de ${nomPays} ?`);
+
+      if (reponseUtilisateur === capitaleAttendue) {
+        alert('Correct !');
+        score++;
+      } else {
+        alert(`Faux ! La capitale de ${nomPays} est ${capitaleAttendue}.`);
+      }*/
+    }
+
+    // Afficher le score dans la console
+    console.log(`Score : ${score}/${pays.length}`);
+  </script>
+</body>
+</html>
